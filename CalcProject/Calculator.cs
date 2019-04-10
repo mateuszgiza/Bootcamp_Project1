@@ -2,13 +2,29 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CalcProject
+namespace Calculator
 {
     public class Calculator
     {
-        public int Add(int a, int b)
+        public int Add(int x, int y)
         {
-            return a + b;
+            //throw new NotImplementedException();
+            //return 5;
+            return x + y;
+        }
+
+        public int Substract(int x, int y)
+        {
+            //throw new NotImplementedException();
+            //return 1;
+            return x - y;
+        }
+        
+        public int Division(int x, int y)
+        {
+            //throw new NotImplementedException();
+            //return 2;
+            return x / y;
         }
     }
 }
