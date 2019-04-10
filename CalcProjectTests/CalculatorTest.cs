@@ -11,7 +11,7 @@ namespace CalcProjectTests
         [Test]
         public void CalcProjectTests_Add_ShouldReturn5()
         {
-            Calculator calculator = new Calculator();
+           var calculator = new Calculator.Piotr.Calculator();
             var shouldReturn = calculator.Add(2, 3);
             Assert.AreEqual(5,shouldReturn);
         }
@@ -19,7 +19,7 @@ namespace CalcProjectTests
         [Test]
         public void CalcProjectTests_Add_ShouldReturnMinusValue()
         {
-            Calculator calculator = new Calculator();
+            var calculator = new Calculator.Piotr.Calculator();
             var shouldReturn = calculator.Add(-2, -3);
             Assert.AreEqual(-5, shouldReturn);
         }
