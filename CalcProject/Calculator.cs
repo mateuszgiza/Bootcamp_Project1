@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Calculator
+namespace calculator1
 {
     public class Calculator
     {
-        public int Add(int x, int y)
-        {
-            //throw new NotImplementedException();
-            //return 5;
-            return x + y;
-        }
+        int a;
+        int b;
 
-        public int Substract(int x, int y)
+
+        public int Add(int a, int b)
         {
+            int result = a + b;
             //throw new NotImplementedException();
-            //return 1;
-            return x - y;
+            return result;
+
         }
-        
-        public int Division(int x, int y)
+        public double Divide(int a, int b)
         {
-            //throw new NotImplementedException();
-            //return 2;
-            return x / y;
+            int result = a / b;
+            return result;
         }
     }
 }
