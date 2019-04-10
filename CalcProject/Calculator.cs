@@ -1,14 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace CalcProject
+namespace AdamS.Calculator
 {
     public class Calculator
     {
-        public int Add(int a, int b)
+        public int Add(int x, int y)
         {
-            return a + b;
+            return x + y;
+        }
+
+        public double Divide(int x, int y)
+        {
+            if (y == 0)
+                throw new DivideByZeroException();
+
+            return (double)x / (double)y;
         }
     }
 }
