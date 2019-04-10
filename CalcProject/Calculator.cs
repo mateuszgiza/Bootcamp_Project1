@@ -10,5 +10,18 @@ namespace CalcProject
         {
             return a + b;
         }
+
+        public int Subtract(int a, int b)
+        {
+            //return -1;
+            return a - b;
+        }
+
+        public int Divide(int a, int b)
+        {
+            //return new NotImplementedException();
+            //return 2;
+            return a / b;
+        }
     }
 }
