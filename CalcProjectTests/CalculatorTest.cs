@@ -1,29 +1,57 @@
-﻿using CalcProject;
-using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CalcProject;
+using NUnit.Framework;
 
-namespace CalcProjectTests
+namespace CalcProject
 {
     class CalculatorTest
     {
         [Test]
-        public void CalcProjectTests_Add_ShouldReturn5()
+        [TestCase(2, 2, 4)]
+        [TestCase(0, -2, -2)]
+        [TestCase(-5, 2, -3)]
+        [TestCase(-2, -2, -4)]
+        public void Add_Test(int a, int b, int expectedResult)
         {
-            Calculator calculator = new Calculator();
-            var shouldReturn = calculator.Add(2, 3);
-            Assert.AreEqual(5,shouldReturn);
+            //Preparation
+            Calculator calc = new Calculator();
+
+            //Action
+            int result = calc.Add(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, result);
+        }
+        
+
+        [Test]
+        [TestCase(2, 2, 1)]
+        [TestCase(0, -2, 0)]
+        [TestCase(-5, 2, -2)]
+        [TestCase(-2, -2, 1)]
+        public void Divide_Test(int a, int b, int expectedResult)
+        {
+            //Preparation
+            Calculator calc = new Calculator();
+
+            //Action
+            int result = calc.Divide(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, result);
+
         }
 
         [Test]
-        public void CalcProjectTests_Add_ShouldReturnMinusValue()
+        public void Divide_ByZero_Test()
         {
-            Calculator calculator = new Calculator();
-            var shouldReturn = calculator.Add(-2, -3);
-            Assert.AreEqual(-5, shouldReturn);
-        }
+            //Preparation
+            Calculator calc = new Calculator();
 
-
+            //Assert
+            Assert.Throws<DivideByZeroException>(() => calc.Divide(2, 0));
+        } 
     }
 }
