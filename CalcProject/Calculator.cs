@@ -1,14 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CalcProject
+namespace Calculator
 {
     public class Calculator
     {
-        public int Add(int a, int b)
+        public int Add(int x, int y)
         {
-            return a + b;
+            return x + y;
+        }
+
+        public double Divide(int x, int y)
+        {
+            if (y == 0)
+                throw new DivideByZeroException();
+
+            return (double)x / (double)y;
         }
     }
 }
