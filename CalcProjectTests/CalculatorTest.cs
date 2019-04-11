@@ -19,30 +19,83 @@ namespace CalcProjectTests
         }
 
         [Test]
-        public void Add_AddingTwoNegativeNumbers_ReturnsResult()
+        public void Add_Adding_Two_Positive_Numbers_Result()
         {
-            var a = -1;
-            var b = -3;
+            //Arrange
+            var calculator = new calculator1.Calculator();
+            int x = 2;
+            int y = 3;
 
-            var calculator = new Calculator();
-            var sum = calculator.Add(a, b);
+            //Act
+            var result = calculator.Add(x, y);
 
-            Assert.That(sum, Is.EqualTo(-4));
+            //Asserts
+            Assert.AreEqual(5, result);
         }
 
         [Test]
-        [TestCase(8, 3, 11)]
-        [TestCase(1, int.MaxValue, int.MinValue)]
-        public void Add_AddingTwoNumbers_ReturnsResult(int a, int b, int result)
+        public void Add_Adding_Two_Negative_Numbers_Result()
         {
-            var calculator = new Calculator();
-            var sum = calculator.Add(a, b);
+            //Arrange
+            var calculator = new calculator1.Calculator();
+            int x = -2;
+            int y = -3;
 
-            Assert.That(sum, Is.EqualTo(result));
+            //Act
+            var result = calculator.Add(x, y);
+
+            //Asserts
+            Assert.AreEqual(-5, result);
         }
 
         [Test]
-        public void Subtract_SubstractTwoNumbers_ReturnsResult()
+        [TestCase(10, 2, 12)]
+        public void Add_Adding_Two_Numbers_Result(int x, int y, int sum)
+        {
+            //Arrange
+            var calculator = new calculator1.Calculator();
+
+            //Act
+            var result = calculator.Add(x, y);
+
+            //Asserts
+            Assert.AreEqual(sum, result);
+        }
+
+        [Test]
+        public void Sub_Sub_Two_Positive_Numbers_Result()
+        {
+            //Arrange
+            var calculator = new calculator1.Calculator();
+            int x = 5;
+            int y = 2;
+
+            //Act
+            var result = calculator.Sub(x, y);
+
+            //Asserts
+            Assert.AreEqual(3, result);
+        }
+
+        [Test]
+        public void Sub_Sub_Two_Negative_Numbers_Result()
+        {
+            //Arrange
+            var calculator = new calculator1.Calculator();
+            int x = -5;
+            int y = -2;
+
+            //Act
+            var result = calculator.Sub(x, y);
+
+            //Asserts
+            Assert.AreEqual(-3, result);
+        }
+
+
+
+        [Test]
+        public void Divide_DivideTwoPositiveNumbers_Result()
         {
             var a = 2;
             var b = 3;
@@ -53,16 +106,20 @@ namespace CalcProjectTests
             Assert.That(sum, Is.EqualTo(-1));
         }
 
+        [TestCase(0, 5, 0)]
+        [TestCase(-5, -2, 2.5f)]
+        [TestCase(5, -2, -2.5f)]
         [Test]
-        public void Divide_DividingTwoNaturalNumbers_ReturnsResult()
+        public void Divide_DivisionValidNumbers_CorrectResult(int x, int y, float res)
         {
-            var a = 4;
-            var b = 2;
+            //Arrange
+            var calculator = new calculator1.Calculator();
 
-            var calculator = new Calculator();
-            var sum = calculator.Divide(a, b);
+            //Act
+            var result = calculator.Divide(x, y);
 
-            Assert.That(sum, Is.EqualTo(2));
+            //Asserts
+            Assert.AreEqual(res, result);
         }
 
         [Test]
