@@ -49,5 +49,15 @@ namespace CalcProject
             //return 2;
             return a / b;
         }
+
+        public int AddIntegers(int a, int b)
+        {
+            return a + b;
+        }
+
+        public int DivideIntegers(int a, int b)
+        {
+            return a / b;
+        }
     }
 }
