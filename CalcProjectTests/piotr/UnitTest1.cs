@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Calculator.Piotr;
+using CalcProject.Piotr;
 
 namespace Tests
 {
@@ -18,21 +18,21 @@ namespace Tests
         [Test]
         public void Add_TwoPositive_PosValue()
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             var result = calc.Add(3, 5);
             Assert.AreEqual(8, result);
         }
         [Test]
         public void Add_TwoNegative_NegValue()
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             var result = calc.Add(-3, -5);
             Assert.AreEqual(-8, result);
         }
         [Test]
         public void Add_OnePosOneNeg_PosValue()
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             var result = calc.Add(-3, 5);
             Assert.AreEqual(2, result);
         }
@@ -40,7 +40,7 @@ namespace Tests
         [Test]
         public void Divide_TwoPos_PosValue()
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             var result = calc.Divide(6, 2);
             Assert.AreEqual(3, result);
         }
@@ -50,14 +50,14 @@ namespace Tests
         [TestCase(0,7, 0)]
         public void Divide_Many_sth(double x, double y, double result)
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             var calresult = calc.Divide(x, y);
             Assert.AreEqual(result, calresult);
         }
         [Test]
         public void Divide_byzero_exception()
         {
-            var calc = new Calculator.Piotr.CalculatorPiotr();
+            var calc = new CalculatorPiotr();
             Assert.Throws<System.DivideByZeroException>(() => calc.Divide(6, 0));
         }
 

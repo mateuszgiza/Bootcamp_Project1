@@ -4,7 +4,7 @@ using System.Text;
 
 
 
-namespace Calculator.Piotr
+namespace CalcProject.Piotr
 {
     public class CalculatorPiotr
     {
