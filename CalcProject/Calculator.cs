@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalcProject
 {
@@ -12,42 +8,31 @@ namespace CalcProject
         {
             return x + y;
         }
-
+        public int Subtract(int a, int b)
+        {
+            return a - b;
+        }
+        public float Divide(float x, float y)
+        {
+            return (float)Divide((decimal)x, (decimal)y);
+        }
+        public double Divide(double x, double y)
+        {
+            return (double)Divide((decimal)x, (decimal)y);
+        }
         public float Divide(int x, int y)
         {
-            if (y == 0) throw new DivideByZeroException();
-            float result = (float)x / y;
-            //throw new NotImplementedException();
-            return result;
-
+            return (float)Divide(x, (decimal)y);
         }
 
-        public int Sub(int x, int y)
-        {
-            return x - y;
-        }
-
-        public float Divide(float x, float y)
+        public decimal Divide(decimal x, decimal y)
         {
             if (y == 0)
             {
                 throw new DivideByZeroException();
             }
-            float result = x / y;
-            return result;
-        }
 
-        public int Subtract(int a, int b)
-        {
-            //return -1;
-            return a - b;
-        }
-
-        public double Divide(double a, double b)
-        {
-            //return new NotImplementedException();
-            //return 2;
-            return a / b;
+            return x / y;
         }
 
         public int AddIntegers(int a, int b)
