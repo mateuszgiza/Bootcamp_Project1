@@ -15,10 +15,38 @@ namespace AdamS.Calculator
 
         public double Divide(int x, int y)
         {
-            if (y == 0)
-                throw new DivideByZeroException();
+            int result = a + b;
+            //throw new NotImplementedException();
+            return result;
 
-            return (double)x / (double)y;
+        }
+
+        public int Sub(int x, int y)
+        {
+            return x - y;
+        }
+
+        public float Divide(float x, float y)
+        {
+            if (y == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            float result = x / y;
+            return result;
+        }
+
+        public int Subtract(int a, int b)
+        {
+            //return -1;
+            return a - b;
+        }
+
+        public double Divide(double a, double b)
+        {
+            //return new NotImplementedException();
+            //return 2;
+            return a / b;
         }
     }
 }
