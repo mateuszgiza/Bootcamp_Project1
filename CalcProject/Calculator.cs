@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace CalcProject
+namespace calculator1
 {
     public class Calculator
     {
-        public int Add(int x, int y)
+        public int Add(int a, int b)
         {
-            return x + y;
+            int result = a + b;
+            //throw new NotImplementedException();
+            return result;
+
         }
 
         public int Sub(int x, int y)
