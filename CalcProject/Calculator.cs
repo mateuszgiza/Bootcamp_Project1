@@ -17,7 +17,7 @@ namespace CalcProject
             return a - b;
         }
 
-        public int Divide(int a, int b)
+        public double Divide(double a, double b)
         {
             //return new NotImplementedException();
             //return 2;
