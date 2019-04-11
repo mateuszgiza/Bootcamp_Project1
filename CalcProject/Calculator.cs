@@ -8,10 +8,6 @@ namespace calculator1
 {
     public class Calculator
     {
-        int a;
-        int b;
-
-
         public int Add(int a, int b)
         {
             int result = a + b;
@@ -19,9 +15,19 @@ namespace calculator1
             return result;
 
         }
-        public double Divide(int a, int b)
+
+        public int Sub(int x, int y)
         {
-            int result = a / b;
+            return x - y;
+        }
+
+        public float Divide(float x, float y)
+        {
+            if (y == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            float result = x / y;
             return result;
         }
     }

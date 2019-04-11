@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Calculator.Piotr
 {
-    public class Calculator
+    public class CalculatorPiotr
     {
         public int Add(int x, int y)
         {
