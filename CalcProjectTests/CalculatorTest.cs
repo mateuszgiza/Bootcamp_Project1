@@ -12,7 +12,7 @@ namespace CalcProjectTests
         public void Add_Adding_Two_Positive_Numbers_Result()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             int x = 2;
             int y = 3;
 
@@ -27,7 +27,7 @@ namespace CalcProjectTests
         public void Add_Adding_Two_Negative_Numbers_Result()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             int x = -2;
             int y = -3;
 
@@ -43,7 +43,7 @@ namespace CalcProjectTests
         public void Add_Adding_Two_Numbers_Result(int x, int y, int sum)
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
 
             //Act
             var result = calculator.Add(x, y);
@@ -56,7 +56,7 @@ namespace CalcProjectTests
         public void Sub_Sub_Two_Positive_Numbers_Result()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             int x = 5;
             int y = 2;
 
@@ -71,7 +71,7 @@ namespace CalcProjectTests
         public void Sub_Sub_Two_Negative_Numbers_Result()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             int x = -5;
             int y = -2;
 
@@ -88,7 +88,7 @@ namespace CalcProjectTests
         public void Divide_DivideTwoPositiveNumbers_Result()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             float x = 5;
             float y = 2;
 
@@ -106,7 +106,7 @@ namespace CalcProjectTests
         public void Divide_DivisionValidNumbers_CorrectResult(int x, int y, float res)
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
 
             //Act
             var result = calculator.Divide(x, y);
@@ -119,7 +119,7 @@ namespace CalcProjectTests
         public void Divide_DivideByZero_ThrowsException()
         {
             //Arrange
-            var calculator = new CalcProject.Calculator();
+            var calculator = new calculator1.Calculator();
             int x = 5;
             int y = 0;
 
