@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-
-
-namespace CalcProject.Piotr
+﻿namespace CalcProject.Piotr
 {
     public class CalculatorPiotr
     {
@@ -14,7 +8,7 @@ namespace CalcProject.Piotr
         }
         public double Divide(double x, double y)
         {
-            if (y==0)
+            if (y == 0)
             {
                 throw new System.DivideByZeroException();
             }

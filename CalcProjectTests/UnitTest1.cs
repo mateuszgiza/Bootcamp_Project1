@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using CalcProject;
+using NUnit.Framework;
 
 namespace Tests
 {
@@ -16,10 +16,10 @@ namespace Tests
         public void Add_ReturnsProperValue(int z, int x, int expectedValue)
         {
             //arrange
-            var calc = new Calculator();
+            Calculator calc = new Calculator();
 
             //act
-            var result = calc.Add(z, x);
+            int result = calc.Add(z, x);
 
             //arrange
             Assert.IsTrue(result == expectedValue);
@@ -30,37 +30,34 @@ namespace Tests
         public void Substract_ReturnsProperValue(int z, int x, int expectedValue)
         {
             //arrange
-            var calc = new Calculator();
+            Calculator calc = new Calculator();
 
             //act
-            var result = calc.Subtract(z, x);
+            int result = calc.Subtract(z, x);
 
-            
-             Assert.IsTrue(result == expectedValue);
+
+            Assert.IsTrue(result == expectedValue);
         }
-
-
         [Test]
         public void Division_PositiveInts_ReturnsProperValue()
         {
-            
-            var calc = new Calculator();
 
-            
-            var result = calc.Divide(4, 2);
+            Calculator calc = new Calculator();
 
-            
+
+            float result = calc.Divide(4, 2);
+
+
             Assert.IsTrue(result == 2);
         }
-
         [Test]
         public void Division_DividingByZero_ThrowsException()
         {
-            
-             var calc = new Calculator();
 
-            
-             Assert.Throws<System.DivideByZeroException>(() => calc.Divide(2, 0));
+            Calculator calc = new Calculator();
+
+
+            Assert.Throws<System.DivideByZeroException>(() => calc.Divide(2, 0));
         }
     }
 }
