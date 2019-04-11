@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdamS.Calculator
+namespace CalcProject
 {
     public class Calculator
     {
@@ -13,9 +13,10 @@ namespace AdamS.Calculator
             return x + y;
         }
 
-        public double Divide(int x, int y)
+        public float Divide(int x, int y)
         {
-            int result = a + b;
+            if (y == 0) throw new DivideByZeroException();
+            float result = (float)x / y;
             //throw new NotImplementedException();
             return result;
 

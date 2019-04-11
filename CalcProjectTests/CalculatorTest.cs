@@ -1,9 +1,8 @@
 ﻿using CalcProject;
 using NUnit.Framework;
 using System;
-using CalcProject;
 
-namespace CalcProjectTests
+namespace CalcProject.Tests
 {
     class CalculatorTest
     {
@@ -13,7 +12,7 @@ namespace CalcProjectTests
             var a = 2;
             var b = 3;
 
-            var calculator = new CalcProject.Calculator();
+            var calculator = new Calculator();
             var sum = calculator.Add(a, b);
 
             Assert.That(sum, Is.EqualTo(5));

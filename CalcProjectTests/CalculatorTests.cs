@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CalcProject;
 
-namespace AdamS.Calculator.Tests
+namespace CalcProject.Tests
 {
     [TestFixture]
     public class CalculatorTests
@@ -27,7 +28,7 @@ namespace AdamS.Calculator.Tests
         public void Add_APositiveAndANegative_ShouldReturnProperValue()
         {
             // Arrange
-            var calc = new Calculator();
+            var calc = new CalcProject.Calculator();
 
             // Act
             var result = calc.Add(2, -3);
@@ -40,7 +41,7 @@ namespace AdamS.Calculator.Tests
         public void Divide_TwoPositiveIntegers_ShouldReturnProperValue()
         {
             // Arrange
-            var calc = new Calculator();
+            var calc = new CalcProject.Calculator();
 
             // Act
             var result = calc.Divide(2, 2);
