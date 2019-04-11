@@ -13,14 +13,7 @@ namespace CalcProject
 
         public int Divide(int a, int b)
         {
-            //throw new NotImplementedException();
-
-            //return 4;
-
             return a / b;
         }
-
-    }
-
-    
+    }   
 }
